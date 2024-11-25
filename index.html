@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>Todo List Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div>
+                    <h3 style="margin: 0;">Do-it</h3>
+                    <p style="margin: 0; color: #888;">Ashok</p>
+                </div>
+            </div>
+            <h4>Today tasks</h4>
+            <div class="category" data-category="personal">
+                <div class="category-dot" style="background-color: #CA8BFE;"></div>
+                Personal
+            </div>
+            <div class="category" data-category="freelance">
+                <div class="category-dot" style="background-color: #3FD4F4;"></div>
+                Freelance
+            </div>
+            <div class="category" data-category="work">
+                <div class="category-dot" style="background-color: #FD99AF;"></div>
+                Work
+            </div>
+            <div class="nav-item" data-view="scheduled">
+                <div class="nav-icon">📅</div>
+                Scheduled tasks
+            </div>
+            <div class="nav-item" data-view="settings">
+                <div class="nav-icon">⚙️</div>
+                Settings
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="tasks-view">
+                <h1>Today main focus</h1>
+                <div class="task-list">
+                    <form id="add-task-form" class="add-task-form">
+                        <input type="text" id="task-input" placeholder="Add a new task" required>
+                        <input type="time" id="time-input" required>
+                        <input type="date" id="date-input" required>
+                        <select id="category-input">
+                            <option value="personal">Personal</option>
+                            <option value="freelance">Freelance</option>
+                            <option value="work">Work</option>
+                        </select>
+                        <button type="submit">+</button>
+                    </form>
+                    <div id="personal-tasks">
+                        <div class="category-header">
+                            <div class="category-dot" style="background-color: #CA8BFE;"></div>
+                            <h3>Personal</h3>
+                        </div>
+                    </div>
+                    <div id="freelance-tasks">
+                        <div class="category-header">
+                            <div class="category-dot" style="background-color: #3FD4F4;"></div>
+                            <h3>Freelance</h3>
+                        </div>
+                    </div>
+                    <div id="work-tasks">
+                        <div class="category-header">
+                            <div class="category-dot" style="background-color: #FD99AF;"></div>
+                            <h3>Work</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="scheduled-view" style="display: none;">
+                <h1>Scheduled tasks</h1>
+                <div id="scheduled-tasks" class="task-list"></div>
+            </div>
+            <div id="settings-view" style="display: none;">
+                <h1>Settings</h1>
+                <div class="settings-panel">
+                    <div class="settings-item">
+                        <span>Edit Profile</span>
+                        <span>></span>
+                    </div>
+                    <div class="settings-item">
+                        <span>Change password</span>
+                        <span>></span>
+                    </div>
+                    <div class="settings-item">
+                        <span>Privacy</span>
+                        <span>></span>
+                    </div>
+                    <div class="settings-item">
+                        <span>Notifications</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <span>Language</span>
+                        <span>></span>
+                    </div>
+                    <div class="settings-item">
+                        <span>Currency</span>
+                        <span>></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
